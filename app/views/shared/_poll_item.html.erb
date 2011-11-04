@@ -1,0 +1,9 @@
+<tr>
+        <td class="poll">
+                <span ><%= link_to poll_item.user.name, poll_item.user %></span>
+                <span class="content"><%= link_to poll_item.question, poll_item %></span>
+                <span class="content"><%= poll_item.option1 %></span>
+                <span class="content"><%= poll_item.option2 %></span>
+                <span class="timestamp">Posted <%= time_ago_in_words(poll_item.created_at) %> ago. </span>
+         </td>
+</tr>
