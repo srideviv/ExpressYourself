@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-          @poll = Poll.find(1)
+          @poll = Poll.new
           @poll_items = Poll.all
   end
 

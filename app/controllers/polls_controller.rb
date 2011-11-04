@@ -7,6 +7,12 @@ class PollsController < ApplicationController
   end
 
   def create
+          @poll = current_user.polls.build(params[:poll])
+          if @poll.save
+                  redirect_to root_path
+          else
+                  redirect_to(:back)
+          end
   end
 
   def destroy
